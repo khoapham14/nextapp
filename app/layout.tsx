@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-head-element */
+import Link from "next/link";
+import * as React from "react";
 
 export default function RootLayout({
   children,
@@ -8,7 +10,15 @@ export default function RootLayout({
   return (
     <html>
       <head></head>
-      <body>{children}</body>
+      <body>
+        <main>
+          <nav>
+            <Link href="/">Home</Link>
+            <Link href="/">Stuff</Link>
+          </nav>
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
